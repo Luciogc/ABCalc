@@ -42,22 +42,7 @@
             <input type="number" class="form-control" id="price">
           </div>
 
-          <div class="row">
-            <div class="col">
-              <button type="button" class="btn btn-success" onclick="calculate()">Calculate</button>
-              <button type="button" class="btn btn-danger" onclick="window.clear()">Clear All</button>
-            </div>
-            <div class="col">
-              <h6>Rounding:</h6>
-              <select class="form-select" id="rounding">
-                <option value="1">1</option>
-                <option selected value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-            </div>
-          </div>
+          <button type="button" class="btn btn-success" onclick="calculate()">Calculate</button>
 
           <div class="input-group mb-3" style="margin-top: 10px;">
             <span class="input-group-text" id="inputGroup-sizing-default">Board Feet</span>
@@ -67,6 +52,7 @@
             <span class="input-group-text" id="inputGroup-sizing-default">Price</span>
             <input type="text" class="form-control" id="pricecalc" disabled readonly>
           </div>
+          <button type="button" class="btn btn-danger" onclick="window.clear()">Clear All</button>
         </div>
         <div class="col">
           <h3>List:</h3>
@@ -78,6 +64,10 @@
           <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">Total Boards</span>
             <input type="text" class="form-control" id="tboards" disabled readonly>
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Total Price</span>
+            <input type="text" class="form-control" id="tprice" disabled readonly>
           </div>
         </div>
       </div>
