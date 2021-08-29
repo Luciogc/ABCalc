@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>ABCalc</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">ABCalc</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-sm" style="margin-top: 10px;">
+      <div class="row">
+        <div class="col">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Length</span>
+            <input type="number" class="form-control" id="length" placeholder="Inches">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Width</span>
+            <input type="number" class="form-control" id="width" placeholder="Inches">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Thickness</span>
+            <input type="number" class="form-control" id="thickness" placeholder="Inches">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Price/BDFT</span>
+            <input type="number" class="form-control" id="price">
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <button type="button" class="btn btn-success" onclick="calculate()">Calculate</button>
+              <button type="button" class="btn btn-danger" onclick="window.clear()">Clear All</button>
+            </div>
+            <div class="col">
+              <h6>Rounding:</h6>
+              <select class="form-select" id="rounding">
+                <option value="1">1</option>
+                <option selected value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="input-group mb-3" style="margin-top: 10px;">
+            <span class="input-group-text" id="inputGroup-sizing-default">Board Feet</span>
+            <input type="text" class="form-control" id="boardfeet" disabled readonly>
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Price</span>
+            <input type="text" class="form-control" id="pricecalc" disabled readonly>
+          </div>
+        </div>
+        <div class="col">
+          <h3>List:</h3>
+          <textarea class="form-control" id="boardlist" rows=6 disabled readonly></textarea>
+          <div class="input-group mb-3" style="margin-top: 10px;">
+            <span class="input-group-text" id="inputGroup-sizing-default">Total Board Feet</span>
+            <input type="text" class="form-control" id="tboardfeet" disabled readonly>
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Total Boards</span>
+            <input type="text" class="form-control" id="tboards" disabled readonly>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="scripts\calculate.js" charset="utf-8"></script>
+  </body>
+</html>
