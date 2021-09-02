@@ -37,14 +37,8 @@ function calculate() {
 function clear() {
   boardList = [];
   prices = [];
-  document.getElementById('length').value = "";
-  document.getElementById('width').value = "";
-  document.getElementById('thickness').value = "";
-  document.getElementById('price').value = "";
-  document.getElementById('boardlist').value = "";
-  document.getElementById('tboardfeet').value = "";
-  document.getElementById('tboards').value = "";
-  document.getElementById('boardfeet').value = "";
-  document.getElementById('tprice').value = "";
-  document.getElementById('pricecalc').value = "";
+  var resetValues = ['length', 'width', 'thickness', 'price', 'boardlist', 'tboardfeet', 'tboards', 'boardfeet', 'tprice', 'pricecalc'];
+  resetValues.forEach((item, i) => {
+    document.getElementById(item).value = "";
+  });
 }
