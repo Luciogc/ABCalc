@@ -4,6 +4,16 @@
     <meta charset="utf-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style media="screen">
+      @media (max-width: 480px) {
+        .scaleMedia {
+          flex-direction: column;
+        }
+        .resultsColumn {
+          margin-top: 5px;
+        }
+      }
+    </style>
     <title>ABCalc</title>
   </head>
   <body>
@@ -24,7 +34,7 @@
     </nav>
 
     <div class="container-sm" style="margin-top: 10px;">
-      <div class="row">
+      <div class="row scaleMedia">
         <div class="col">
           <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">Length</span>
@@ -55,7 +65,7 @@
           </div>
           <button type="button" class="btn btn-danger" onclick="window.clear()">Clear All</button>
         </div>
-        <div class="col">
+        <div class="col resultsColumn">
           <h3>List:</h3>
           <textarea class="form-control" id="boardlist" rows=6 disabled readonly></textarea>
           <div class="input-group mb-3" style="margin-top: 10px;">
